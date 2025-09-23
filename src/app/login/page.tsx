@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { User, Lock, Eye, EyeOff } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Navbar from '@/components/Navbar';
 
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = React.useState({
@@ -67,6 +68,14 @@ const LoginPage: React.FC = () => {
         backgroundImage: 'url(/assets/login-background.png)',
       }}
     >
+<Navbar
+  user={{
+    id: 1,
+    username: "khang",
+    email: "khang@example.com"
+  }}
+/>
+
       <div className="w-full max-w-md">
         <div className="bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 shadow-2xl">
 
