@@ -3,9 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { User, Lock, Eye, EyeOff } from 'lucide-react';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
-import Navbar from '@/components/Navbar';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useAuth } from '@/contexts/AuthContext';
 
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = React.useState({
@@ -13,10 +12,13 @@ const LoginPage: React.FC = () => {
     password: ''
   });
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const { refreshAuth } = useAuth();
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState('');
   const [showPassword, setShowPassword] = React.useState(false);
   const [rememberMe, setRememberMe] = React.useState(false);
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -41,6 +43,7 @@ const LoginPage: React.FC = () => {
       const result = await response.json();
 
       if (response.ok) {
+        refreshAuth();
         router.replace('/play/online');
       } else {
         setError(result.error);
@@ -68,29 +71,13 @@ const LoginPage: React.FC = () => {
         backgroundImage: 'url(/assets/login-background.png)',
       }}
     >
-<Navbar
-  user={{
-    id: 1,
-    username: "khang",
-    email: "khang@example.com"
-  }}
-/>
-
       <div className="w-full max-w-md">
         <div className="bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 shadow-2xl">
 
           <div className="text-center mb-8">
-            <Image
-              src="/assets/kangyoo.png"
-              width={64}
-              height={64}
-              alt="Kangyoo Logo"
-              className="h-16 mx-auto mb-4 object-contain"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-              }}
-            />
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h1>
+            {searchParams.get('registered') === '1' ?
+              <h1 className="text-2xl font-bold text-gray-800 mb-2">Registration successful</h1> :
+              <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h1>}
             <p className="text-gray-600 text-sm">
               Sign in to your account
             </p>

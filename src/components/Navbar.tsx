@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ChevronDown,
   LogOut,
@@ -44,9 +45,12 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <div className="text-gray-900 text-xl font-bold hover:text-blue-600 transition-colors">
-              KANGYOO
-            </div>
+            <Image
+              src="/assets/logo.png"
+              width={130}
+              height={100}
+              alt="Kangyoo Logo"
+            />
           </Link>
 
           {/* Navigation Menu */}

@@ -95,14 +95,7 @@ const RegisterPage: React.FC = () => {
     const result = await response.json();
 
     if (response.ok) {
-      router.replace('/login');
-      setFormData({
-        username: '',
-        email: '',
-        password: '',
-        skillLevel: 'beginner'
-      });
-      setStep('choice'); 
+      router.replace('/login?registered=1');
     } else {
       setError(result.error);
     }
