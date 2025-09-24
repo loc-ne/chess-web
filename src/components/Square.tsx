@@ -16,7 +16,7 @@ const Square = ({ isLight, onClick, className = '', children, isSelected, isVali
     cursor-pointer 
     transition-all duration-200 
     hover:brightness-110
-    ${isLight ? '#7294a5' : '#dfe9ec'}
+    ${isLight ? 'bg-[#7294a5]' : 'bg-[#dfe9ec]'}
     ${isSelected ? 'ring-4 ring-yellow-400 ring-inset' : ''}
     ${isValidMove ? 'ring-4 ring-green-400 ring-inset' : ''}
   `;
