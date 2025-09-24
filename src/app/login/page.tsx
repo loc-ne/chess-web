@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { User, Lock, Eye, EyeOff } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import Board from '@/components/Board';
 
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = React.useState({
@@ -72,10 +71,6 @@ const LoginPage: React.FC = () => {
         backgroundImage: 'url(/assets/login-background.png)',
       }}
     >
-      <Board
-      playerColor={'white'}
-      initialFen={"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"}
-      />
       <div className="w-full max-w-md">
         <div className="bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 shadow-2xl">
 
