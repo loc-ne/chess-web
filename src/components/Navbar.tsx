@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
                 href="/play/online"
                 className="text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1"
               >
-                <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/sword-icon-svg-download-png-2585261.png" width="48" height="48"/>
+                <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/sword-icon-svg-download-png-2585261.png" width="35" height="35"/>
 
                 <span>Chơi</span>
               </Link>
@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
                 href="/puzzles"
                 className="text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="mt-2" width="50" height="50" viewBox="0 0 64 64" id="puzzle">
+                <svg xmlns="http://www.w3.org/2000/svg" className="mt-2" width="35" height="35" viewBox="0 0 64 64" id="puzzle">
                   <linearGradient id="a" x1="32.574" x2="32.574" y1="12.519" y2="61.398" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stopColor="#fff" stopOpacity=".25"></stop>
                     <stop offset="1" stopColor="#fed3be"></stop>
@@ -100,7 +100,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
                 href="/learn"
                 className="text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1"
               >
-                <img src="https://d3sxshmncs10te.cloudfront.net/icon/free/svg/10012778.svg?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTc1ODg4MzU5OSwicSI6bnVsbCwiaWF0IjoxNzU4NjI0Mzk5fQ__.98eee27cb68b8e9be2e1954024cf5328af331c4f97e7df2b3f24d7328992ee92" width="60" height="60" />
+                <img src="https://d3sxshmncs10te.cloudfront.net/icon/free/svg/10012778.svg?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTc1ODg4MzU5OSwicSI6bnVsbCwiaWF0IjoxNzU4NjI0Mzk5fQ__.98eee27cb68b8e9be2e1954024cf5328af331c4f97e7df2b3f24d7328992ee92" width="40" height="40" />
 
 
                 <span>Học</span>
@@ -111,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
                 href="/settings"
                 className="text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1"
               >
-                <img src="https://d3sxshmncs10te.cloudfront.net/icon/free/svg/4574515.svg?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTc1ODg4NDQyNywicSI6bnVsbCwiaWF0IjoxNzU4NjI1MjI3fQ__.7fc6ea76c340c492cf27e2abbee3a6f7b078378b8aa26719608993c96d4be9f7" width="50" height="50" />
+                <img src="https://d3sxshmncs10te.cloudfront.net/icon/free/svg/4574515.svg?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTc1ODg4NDQyNywicSI6bnVsbCwiaWF0IjoxNzU4NjI1MjI3fQ__.7fc6ea76c340c492cf27e2abbee3a6f7b078378b8aa26719608993c96d4be9f7" width="30" height="30" />
 
                 <span>Cài đặt</span>
               </Link>
